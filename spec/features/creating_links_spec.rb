@@ -25,7 +25,7 @@ feature 'creating new links with tags' do
     visit '/links/new'
     fill_in 'url', with: 'http://www.zombo.com'
     fill_in 'title', with: 'This is Zombocom'
-    fill_in 'tag', with: 'stupid, waster'
+    fill_in 'tag', with: 'stupid waster'
     click_button 'Create link'
     link = Link.first
     expect(link.tags.map(&:name)).to include('stupid', 'waster')

@@ -17,7 +17,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require File.join(File.dirname(__FILE__), '..', 'app/bookmark_manager.rb')
+require File.join(File.dirname(__FILE__), '..', './app/app.rb')
 
 require 'capybara/rspec'
 require 'database_cleaner'
