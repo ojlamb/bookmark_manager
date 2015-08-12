@@ -1,6 +1,7 @@
 require 'data_mapper'
 require 'dm-core'
 require 'dm-migrations'
+require 'dm-validations'
 
 
 env = ENV['RACK_ENV'] || 'development'
