@@ -21,6 +21,7 @@ require File.join(File.dirname(__FILE__), '..', './app/app.rb')
 
 require 'capybara/rspec'
 require 'database_cleaner'
+require_relative 'helpers/session'
 
 Capybara.app = BookMarkManager
 
@@ -28,7 +29,8 @@ RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
-
+  config.include SessionHelpers
+  
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods
