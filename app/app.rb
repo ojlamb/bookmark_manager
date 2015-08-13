@@ -1,17 +1,20 @@
 require 'data_mapper'
 require 'sinatra/base'
 require 'sinatra/flash'
+require 'sinatra/partial'
 require './app/models/link.rb'
 require './data_mapper_setup'
 
 class BookMarkManager < Sinatra::Base
   register Sinatra::Flash
+  register Sinatra::Partial
   use Rack::MethodOverride
 
   set :views, proc { File.join(root, '..', 'views') }
 
   enable :sessions
   set :session_secret, 'super secret'
+  set :partial_template_engine, :erb
 
   get '/' do
     redirect '/links'
