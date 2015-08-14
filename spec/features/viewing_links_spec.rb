@@ -1,5 +1,4 @@
 require 'spec_helper'
-require './data_mapper_setup'
 
 feature 'Viewing links' do
 
